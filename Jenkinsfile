@@ -5,7 +5,7 @@ pipeline {
         EMAIL_TO = "maria.donner@skyered-education.de"
     }
     stages {
-        ge('Build') {
+        stage('Build') {
             steps {
                 sh 'python3 -m venv $VENV_PATH'
                 sh './$VENV_PATH/bin/pip install -r requirements.txt'
